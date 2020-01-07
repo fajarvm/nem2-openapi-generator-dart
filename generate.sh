@@ -5,12 +5,12 @@ NEM2_API_DIR="./lib/src/infrastructure/"
 NEM2_API_MODEL_DIR=$NEM2_API_DIR"model/"
 
 ## Download NEM2 OpenAPI definition
-## OpenAPI v3: https://raw.githubusercontent.com/nemtech/nem2-openapi/master/spec/openapi3.yaml
+## NEM2 OpenAPI v3: https://github.com/nemtech/nem2-openapi/
 ## Dart generator issue: https://github.com/OpenAPITools/openapi-generator/pull/3656
-#curl -O https://raw.githubusercontent.com/nemtech/nem2-openapi/master/spec/openapi3.yaml
+#curl -O https://raw.githubusercontent.com/NEMStudios/nem2-open-api-generator/master/openapi3-any-of-patch.yml
 
 #OPENAPI_DEFINITION_FILE="openapi3.yaml"
-OPENAPI_DEFINITION_FILE="openapi3-anyOf-fix.yaml"
+OPENAPI_DEFINITION_FILE="openapi3-any-of-patch.yaml"
 
 ## Install openapi-generator CLI
 brew list openapi-generator || brew install openapi-generator

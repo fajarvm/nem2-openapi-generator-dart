@@ -22,7 +22,7 @@ This project is updated for NEM2 OpenAPI specification version [0.7.20][nem2-ope
 ## Notes
 * This project's version should be consistent with that of the NEM2 OpenAPI specification (as specified inside `openapi3.yaml`). 
 * Whenever there is a new version available for the NEM2 OpenAPI specification, this project should be upgraded, regenerated and published to [Dart packages repository][dart-packages-repo].
-* The generator currently uses a patched version of the specification (`openapi3-anyOf-fix.yaml`) due to an ongoing bug of the `anyOf` which also affects the Dart generator. We will use the standard specification once the `anyOf` issue has been fixed.
+* The generator currently uses a patched version of the specification (`openapi3-any-of-patch.yaml`) due to an ongoing bug of the `anyOf` which also affects the Dart generator. We will use the standard specification once the `anyOf` issue has been fixed.
 * Due to an open issue to the OpenAPI generator for Dart version 2 ([dart2 template issue][openapi-generator-dart2-template-issue]), you may want to use a custom template provided inside the `dart2-template` directory instead of the [default][openapi-generator-dart2-default-template] one. You can change the generator script to use this custom template when generating the code.
 
 ## TODOs
