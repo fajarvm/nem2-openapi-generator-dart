@@ -12,12 +12,13 @@ Run the code generation script:
 ```$bash
 ./generate.sh
 ```
+Please note that the generator also generates ```.gitignore```, a README, Dart metadata (pubspec), Travis and other configuration files which will overwrite any existing files with the same name.
 
 ## Configuration
-The OpenAPI generator uses a custom configuration file `openapi-config.yaml` available for Dart. Please refer to the following page for a complete list of config options: [here][openapi-genrator-dart2-configs].
+The OpenAPI generator accepts custom configuration available for Dart from the file `openapi-config.yaml`. Please refer to the following page for a complete list of config options: [dart][openapi-generator-dart2-configs] or [dart-dio][openapi-generator-dart2-dio-configs] (depends on your preference).
 
 ## Version
-This project is updated for NEM2 OpenAPI specification version [0.7.20][nem2-openapi-spec-file].
+This project is updated for NEM2 OpenAPI specification version [0.8.4][nem2-openapi-spec-file].
 
 ## Notes
 * This project's version should be consistent with that of the NEM2 OpenAPI specification (as specified inside `openapi3.yaml`). 
@@ -31,7 +32,7 @@ This project is updated for NEM2 OpenAPI specification version [0.7.20][nem2-ope
 * Publish to Dart packages repository. 
 
 ## License
-Copyright (c) 2019
+Copyright (c) 2020
 
 Licensed under the [Apache License 2.0](LICENSE)
 
@@ -45,5 +46,6 @@ THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPL
 [openapi-generator-anyof-issue634]: https://github.com/OpenAPITools/openapi-generator/issues/634
 [openapi-generator-dart2-template-issue]: https://github.com/OpenAPITools/openapi-generator/pull/3656
 [openapi-generator-dart2-default-template]: https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator/src/main/resources/dart2
-[openapi-genrator-dart2-configs]: https://openapi-generator.tech/docs/generators/dart
+[openapi-generator-dart2-configs]: https://openapi-generator.tech/docs/generators/dart
+[openapi-generator-dart2-dio-configs]: https://openapi-generator.tech/docs/generators/dart-dio
 [dart-packages-repo]: https://pub.dev
