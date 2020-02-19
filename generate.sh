@@ -41,4 +41,5 @@ openapi-generator generate \
 
 ## Move generated files to the correct source folder. For some reasons, the generator creates
 ## an extra 'lib' folder and puts all of the generated code in there.
-mv "$SOURCE_FOLDER/lib/*" $SOURCE_FOLDER; rm -f "$SOURCE_FOLDER/lib"
+OUTPUT_LIB_FOLDER="$SOURCE_FOLDER/lib"
+mv $OUTPUT_LIB_FOLDER/* $SOURCE_FOLDER && rmdir $OUTPUT_LIB_FOLDER
