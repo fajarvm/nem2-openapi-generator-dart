@@ -1,21 +1,20 @@
 #!/usr/bin/env bash
 
+## The custom template directory for Dart2
 TEMPLATE_DIR="./dart2-template"
-NEM2_API_DIR="./lib/src/infrastructure/"
-NEM2_API_MODEL_DIR=$NEM2_API_DIR"model/"
+
+## Source folder for generated code as defined in the 'openapi-config.yml'
+SOURCE_FOLDER="./lib/src/sdk/infrastructure"
 
 ## Download NEM2 OpenAPI definition
 ## NEM2 OpenAPI v3: https://github.com/nemtech/nem2-openapi/
-## Dart generator issue: https://github.com/OpenAPITools/openapi-generator/pull/3656
-#curl -O https://raw.githubusercontent.com/NEMStudios/nem2-open-api-generator/master/openapi3-any-of-patch.yml
+curl -O https://nemtech.github.io/nem2-openapi/openapi3.yml
 
-#OPENAPI_DEFINITION_FILE="openapi3.yaml"
-OPENAPI_DEFINITION_FILE="openapi3-any-of-patch.yaml"
+OPENAPI_DEFINITION_FILE="./openapi3.yml"
 
 ## Install openapi-generator CLI
+## Dart generator issue: https://github.com/OpenAPITools/openapi-generator/pull/3656
 brew list openapi-generator || brew install openapi-generator
-## Install RPL tool
-#brew list rpl || brew install rpl
 
 ## Generate DTO files
 ##
@@ -33,29 +32,13 @@ brew list openapi-generator || brew install openapi-generator
 ## Param: -t path/to/custom_template_dir
 ## Uses the custom template when generating the code.
 openapi-generator generate \
- -g dart \
- -i ./$OPENAPI_DEFINITION_FILE \
+ -g dart-dio \
+ -i $OPENAPI_DEFINITION_FILE \
  -c openapi-config.yml \
- --generate-alias-as-model
+ --generate-alias-as-model \
+ --enable-post-process-file
 # -t $TEMPLATE_DIR
 
-## TODO: clean-up the code below when they are no longer in use for development.
-### Create a new api library file
-#FILE=$NEM2_API_DIR"model.dart"
-#touch $FILE
-#cat <<EOM >$FILE
-#library nem2_sdk_dart.infrastructure.model;
-#
-#EOM
-#
-### Add all model files as part of the library
-#for filename in "$NEM2_API_MODEL_DIR"*.dart; do
-#    [ -e "$filename" ] || continue
-#        # Replace package name using rpl text replacement tool
-#        rpl -iw 'nem2_sdk_dart.api;' 'nem2_sdk_dart.infrastructure.model;' "$filename"
-#
-#        # Include file as part of the model package
-#        basename "$filename";
-#        f="$(basename -- "$filename")";
-#        printf "part 'model/%s';\n" "$f" >> $FILE;
-#done
+## Move generated files to the correct source folder. For some reasons, the generator creates
+## an extra 'lib' folder and puts all of the generated code in there.
+mv "$SOURCE_FOLDER/lib/*" $SOURCE_FOLDER; rm -f "$SOURCE_FOLDER/lib"

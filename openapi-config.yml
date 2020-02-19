@@ -1,4 +1,18 @@
-# OpenAPI configuration file for Dart generator
-# Full spec can be viewed here: https://openapi-generator.tech/docs/generators/dart
-pubName: "nem2_sdk_dart"
+# OpenAPI configuration file for Dart generator.
+# Full spec can be viewed here:
+# * https://openapi-generator.tech/docs/generators/dart, or
+# * https://openapi-generator.tech/docs/generators/dart-dio
+
+pubName: "nem2_sdk_dart.sdk.infrastructure"
+pubVersion: "0.8.4"
+pubAuthor: "Fajar van Megen"
+pubDescription: "A tool that generates OpenAPI client library for NEM2 SDK written in Dart"
+
+sourceFolder: "lib/src/sdk/infrastructure"
 useEnumExtension: "true"
+
+# Date library to use: 'core' (default) or 'timemachine'.
+# 'core' is a Dart core library (DateTime),
+# 'timemachine' is a date and time library for Flutter, Web, and Server with
+# support for timezones, calendars, cultures, formatting and parsing.
+# dateLibrary: timemachine
