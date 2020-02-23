@@ -3,12 +3,12 @@
 # * https://openapi-generator.tech/docs/generators/dart, or
 # * https://openapi-generator.tech/docs/generators/dart-dio
 
-pubName: "nem2_sdk_dart.sdk.infrastructure"
-pubVersion: "0.8.4"
+pubName: "nem2_openapi_generator_dart"
+pubVersion: "0.8.5"
 pubAuthor: "Fajar van Megen"
 pubDescription: "A tool that generates OpenAPI client library for NEM2 SDK written in Dart"
 
-sourceFolder: "lib/src/sdk/infrastructure"
+# sourceFolder: "lib/src/sdk/infrastructure"
 useEnumExtension: "true"
 
 # Date library to use: 'core' (default) or 'timemachine'.
