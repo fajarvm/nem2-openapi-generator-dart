@@ -23,7 +23,6 @@ OPENAPI_DEFINITION_FILE="openapi3.yml"
 ## Download NEM2 OpenAPI definition
 ## NEM2 OpenAPI v3: https://github.com/nemtech/symbol-openapi/
 curl -o $OPENAPI_DEFINITION_FILE https://nemtech.github.io/symbol-openapi/openapi3.yml
-#curl -o $OPENAPI_DEFINITION_FILE https://raw.githubusercontent.com/NEMStudios/nem2-open-api-generator/master/openapi3-any-of-patch.yml
 
 ## Install openapi-generator CLI
 ## Dart generator issue: https://github.com/OpenAPITools/openapi-generator/pull/3656
@@ -44,6 +43,8 @@ brew list openapi-generator || brew install openapi-generator
 ##
 ## Param: -t path/to/custom_template_dir
 ## Uses the custom template when generating the code.
+echo "Generating '$DART_GENERATOR' code. Definition: '$OPENAPI_DEFINITION_FILE'. Custom config: '$OPENAPI_CONFIG_FILE'"
+
 openapi-generator generate \
  -g $DART_GENERATOR \
  -i $OPENAPI_DEFINITION_FILE \
