@@ -3,26 +3,26 @@
 ####### configs #######
 #######################
 ## Dart generator: dart | dart-dio | dart-jaguar
-DART_GENERATOR="dart"
+DART_GENERATOR="dart-dio"
 
 ## The custom template directory for Dart2
 TEMPLATE_DIR="dart2-template"
 
-## Source folder for generated code as defined in the 'openapi-config.yml'
+## Source folder for generated code as defined in the 'openapi-dart-config.yml'
 SOURCE_FOLDER="lib/src/sdk/infrastructure"
 
 ## OpenAPI custom configuration file
-OPENAPI_CONFIG_FILE="openapi-config.yml"
+OPENAPI_CONFIG_FILE="openapi-dart-config.yml"
 
 ## OpenAPI definition file name
-OPENAPI_DEFINITION_FILE="openapi3.yml"
+OPENAPI_DEFINITION_FILE="openapi3-dart.yml"
 
 #########################
 ####### operation #######
 #########################
-## Download NEM2 OpenAPI definition
-## NEM2 OpenAPI v3: https://github.com/nemtech/symbol-openapi/
-curl -o $OPENAPI_DEFINITION_FILE https://nemtech.github.io/symbol-openapi/openapi3.yml
+## Download Symbol OpenAPI definition
+## Symbol OpenAPI v3: https://github.com/nemtech/symbol-openapi/
+# curl -o $OPENAPI_DEFINITION_FILE https://nemtech.github.io/symbol-openapi/openapi3.yml
 
 ## Install openapi-generator CLI
 ## Dart generator issue: https://github.com/OpenAPITools/openapi-generator/pull/3656
