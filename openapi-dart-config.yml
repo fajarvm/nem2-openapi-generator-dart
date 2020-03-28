@@ -15,4 +15,4 @@ useEnumExtension: "true"
 # 'core' is a Dart core library (DateTime),
 # 'timemachine' is a date and time library for Flutter, Web, and Server with
 # support for timezones, calendars, cultures, formatting and parsing.
-dateLibrary: timemachine
+# dateLibrary: timemachine

@@ -3,7 +3,7 @@
 ####### configs #######
 #######################
 ## Dart generator: dart | dart-dio | dart-jaguar
-DART_GENERATOR="dart-dio"
+DART_GENERATOR="dart"
 
 ## The custom template directory for Dart2
 TEMPLATE_DIR="dart2-template"

@@ -2,13 +2,17 @@
 This is an OpenAPI generator for Dart (v2 and above) which allows generation of Symbol API client libraries for symbol SDK Dart ([symbol-sdk-dart][symbol-sdk-dart-repo]) automatically given a Symbol OpenAPI specification ([symbol-openapi][symbol-openapi-spec-repo]).
 
 ## Requirements
-An [OpenAPI Generator CLI][openapi-generator-cli-docs] version 4.2.3 (or above) for your Operating System is required to generate the client libraries.
+An [OpenAPI Generator CLI][openapi-generator-cli-docs] version 4.3.0 (or above) for your Operating System is required to generate the client libraries.
 The code generation script uses Homebrew by default and it will install the openapi-generator-cli when it has not been installed.
 
 If you want to install and use the OpenAPI generator without using Homebrew, then you can disable the line inside the code generation script that checks and installs it.
 
 ## Usage
-Run the code generation script:
+Run the script to download and patch the Symbol OpenAPI specification file:
+```$bash
+./download-and-patch.sh
+```
+And then run the code generation script:
 ```$bash
 ./generate.sh
 ```
