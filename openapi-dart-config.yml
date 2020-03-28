@@ -3,13 +3,13 @@
 # * https://openapi-generator.tech/docs/generators/dart, or
 # * https://openapi-generator.tech/docs/generators/dart-dio
 
-pubName: "symbol_openapi_generator_dart"
-pubVersion: "0.8.6"
+pubName: "symbol_openapi_dart_client"
+pubVersion: "0.8.9"
 pubAuthor: "Fajar van Megen"
 pubDescription: "A tool that generates OpenAPI client library for Symbol SDK written in Dart"
 
 # sourceFolder: "lib/src/sdk/infrastructure"
-useEnumExtension: "true"
+# useEnumExtension: "true"
 
 # Date library to use: 'core' (default) or 'timemachine'.
 # 'core' is a Dart core library (DateTime),
