@@ -42,6 +42,6 @@ done
 #  cp tmp.yml openapi3-dart.yml
 #done
 
-sed -i '/anyOf: ''/d' openapi3-dart.yml
+sed -i '' '/anyOf: ''/d' openapi3-dart.yml
 
 rm -f tmp.yml
