@@ -22,7 +22,7 @@ Please note that the generator also generates ```.gitignore```, a README, Dart m
 The OpenAPI generator accepts custom configuration available for Dart from the file `openapi-config.yaml`. Please refer to the following page for a complete list of config options: [dart][openapi-generator-dart2-configs] or [dart-dio][openapi-generator-dart2-dio-configs] (depends on your preference).
 
 ## Version
-This project is updated for Symbol OpenAPI specification version [0.8.6][symbol-openapi-spec-file].
+This project is updated for Symbol OpenAPI specification version [0.8.9][symbol-openapi-spec-file].
 
 ## Notes
 * This project's version should be consistent with that of the Symbol OpenAPI specification (as specified inside `openapi3.yaml`). 
@@ -45,7 +45,7 @@ THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPL
 
 [symbol-sdk-dart-repo]: https://github.com/fajarvm/symbol-sdk-dart
 [symbol-openapi-spec-repo]: https://github.com/nemtech/symbol-openapi/
-[symbol-openapi-spec-file]: https://github.com/nemtech/symbol-openapi/releases/tag/v0.8.6
+[symbol-openapi-spec-file]: https://github.com/nemtech/symbol-openapi/releases/tag/v0.8.9
 [openapi-generator-cli-docs]: https://openapi-generator.tech/docs/installation
 [openapi-generator-anyof-issue634]: https://github.com/OpenAPITools/openapi-generator/issues/634
 [openapi-generator-dart2-template-issue]: https://github.com/OpenAPITools/openapi-generator/pull/3656
